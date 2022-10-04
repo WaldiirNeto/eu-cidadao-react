@@ -1,0 +1,9 @@
+// replace variables boostrap
+$theme-colors: (
+    "primary": #1474FF,
+    "primary-medium": #00327A,
+    "danger": #FF0000
+);
+
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";

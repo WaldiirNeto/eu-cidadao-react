@@ -1,0 +1,34 @@
+@import 'src/styles/_variables.scss';
+
+@mixin ocorrencia-status($background-color) {
+    background-color: $background-color;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: $box-background;
+    font-weight: 700;
+    font-size: 14px;
+    flex: none;
+    flex-grow: 0;
+    line-height: 112.5%;
+    letter-spacing: 0.005em;
+    order: 0;
+    padding: 10px;
+}
+
+.ocorrencia-recusada {
+    @include ocorrencia-status($status-recusada)
+}
+
+.ocorrencia-resolvida {
+    @include ocorrencia-status($status-resolvida)
+}
+
+.ocorrencia-pendente {
+    @include ocorrencia-status($status-pendente)
+}
+
+.ocorrencia-tratamento {
+    @include ocorrencia-status($status-tratamento)
+}

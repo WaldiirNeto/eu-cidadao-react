@@ -1,0 +1,4 @@
+{
+  "/api/Autenticacao/Login": "/authDataMock",
+  "/api/Usuario": "/userDataMock"
+}

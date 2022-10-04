@@ -1,0 +1,32 @@
+$qtd-ocorrencias-background: #D6E7FF;
+$qtd-ocorrencias-resolvidas-background: #00327A;
+$percentual-resolvidas-background: #1474FF;
+$percentual-pendentes: #FDBF76;
+$default: #000;
+$white: white;
+
+@mixin colorDimanicQtd($backGroundColor, $color) {
+    width: 289px;
+    height: 48px;
+    left: 0px;
+    top: 27px;
+    background: $backGroundColor;
+    color: $color;
+    border-radius: 8px;
+}
+
+.percentual-qtd-ocorrencias {
+    @include colorDimanicQtd($qtd-ocorrencias-background, $default)
+}
+
+.percentual-qtd-ocorrencias-resolvidas {
+    @include colorDimanicQtd($qtd-ocorrencias-resolvidas-background, $white)
+}
+
+.percentual-resolvidas {
+    @include colorDimanicQtd($percentual-resolvidas-background, $white)
+}
+
+.percentual-pendentes {
+    @include colorDimanicQtd($percentual-pendentes, $default)
+}

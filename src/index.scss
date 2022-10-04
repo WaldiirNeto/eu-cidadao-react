@@ -1,0 +1,80 @@
+@import './styles/variables';
+@import './styles/_extends';
+@import './styles/_custom-theme';
+
+body,
+html {
+  height: 100%;
+  background: $background-color;
+  font-family: 'Nunito', sans-serif;
+  src: local("Nunito"), url(./assets/fonts/Nunito/static/Nunito-Regular.ttf) format("truetype");
+}
+
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb {
+  width: 26px;
+  border-radius: 13px;
+  background-clip: padding-box;
+  border: 12px solid transparent;
+  color: rgba(0, 0, 0, 0.3);
+
+}
+
+*::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 0 10px;
+}
+
+.circle-user {
+  border-color: map-get($theme-colors, 'primary');
+  border-radius: 50%;
+  border-style: solid;
+  border-width: thin;
+  color: map-get($theme-colors, 'primary');
+  font-size: 18px;
+  height: 50px;
+  width: 50px;
+}
+
+.li-icon {
+  color: $li-color
+}
+
+ul {
+  list-style-type: none;
+}
+
+.table> :not(caption)>*>* {
+  padding: 18px;
+}
+
+table {
+  thead {
+    background: #F4F5F7;
+
+    tr {
+      th {
+        font-weight: 700;
+        @extend %text-table;
+      }
+
+    }
+  }
+
+  tr {
+    th {
+      @extend %text-table;
+
+    }
+
+    td {
+      font-weight: 400;
+      @extend %text-table;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  *::-webkit-scrollbar {
+    display: none;
+  }
+}
